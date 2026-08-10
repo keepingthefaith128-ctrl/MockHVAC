@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | HVAC Pro</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        🚨 24/7 Emergency Service - Call Now: <a href="tel:+15551234567">(555) 123-4567</a>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">HVAC Pro</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>Contact Us</h1>
+        <p>Reach out for a free quote or emergency service</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>📞 Phone</h3>
+                <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p><a href="mailto:info@hvacpro.com">info@hvacpro.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>📍 Address</h3>
+                <p>123 Comfort Lane<br>Anytown, USA 12345</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section id="hours">
+        <h3>Business Hours</h3>
+        <ul>
+            <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
+            <li>Saturday: 9:00 AM - 3:00 PM</li>
+            <li>Sunday: Closed</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 HVAC Pro. All rights reserved.</p>
+            <p class="tagline">Keeping your family comfortable, year-round.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hours Highlighting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const today = days[new Date().getDay()];
+            const hoursList = document.querySelectorAll('#hours li');
+            
+            if (hoursList.length > 0) {
+                hoursList.forEach(li => {
+                    if (li.textContent.includes(today)) {
+                        li.classList.add('today');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
